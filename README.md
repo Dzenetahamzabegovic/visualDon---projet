@@ -5,7 +5,8 @@ Thématiques :
 Le choix du sujet pour notre projet porte sur les tueurs en série. Cette thématique a été mûrement réfléchie et considérée comme suffisamment intéressante. Bien que cela puisse sembler étrange et perturbant, nous avons décidé de l'explorer, car c'est un sujet qui nous fascine beaucoup.
  
 Contexte : d'où viennent les données, qui les a créées et dans quel contexte
-Les données que nous allons utiliser proviennent de la base de données “Serial Killers by number of victims” "https://www.kaggle.com/datasets/vesuvius13/serial-killers-dataset" du site Kaggle.com, mais directement extraite de Wikipedia "https://en.wikipedia.org/wiki/List_of_serial_killers_by_number_of_victims" .  
+Les données que nous allons utiliser proviennent de la base de données “Serial Killers by number of victims” "https://www.kaggle.com/datasets/vesuvius13/serial-killers-dataset" du site Kaggle.com, mais directement extraite de Wikipedia "https://en.wikipedia.org/wiki/List_of_serial_killers_by_number_of_victims" .  [wireFrame_SerialKillers_Deb_Dzen.pdf]
+
 
 
 Description :  Comment sont structurées les données ? Parler du format, des attributs et du type de données
@@ -33,4 +34,6 @@ Références : Qui d'autre dans le web ou dans la recherche a utilisé ces donn�
 
 Ce jeu de données est resté inutilisé. Cependant, quelques utilisateurs du site Kaggle ont essayé de grouper les données, afin de mieux les comprendre. 
 
+WireFrame : 
 
+[wireFrame_SerialKillers_Deb_Dzen.pdf](https://github.com/Dzenetahamzabegovic/visualDon---projet/files/10991982/wireFrame_SerialKillers_Deb_Dzen.pdf)
