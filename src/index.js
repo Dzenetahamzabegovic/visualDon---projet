@@ -1,4 +1,3 @@
-import data from '../data/DataKillers.csv';
+import data from "../data/DataKillers.csv";
 
-console.log(data)
-
+console.log(data);
