@@ -1,0 +1,113 @@
+/* Setting fade transition and default settings */
+body {
+  color: #000;
+  background-color: #f4f4f4;
+  transition: background-color 1s ease;
+}
+#global {
+  background : rgb(252, 252, 252);
+  }
+/* panel styles = titre en bold */
+.panel { 
+  /* min height incase content is higher than window height */
+  min-height: 100vh;
+  display: flex;
+  justify-content: left;
+  justify-content: center;
+  font-family: sans-serif;
+  /* outline: 10px solid hotpink; */
+  /* turn above on to see the edge of panels */
+}
+
+/* colours */
+.color-black {
+  background-color: #000000;
+}
+.color-white {
+  background-color: #ffffff;
+}
+.color-red {
+  background-color: #9E0101;
+}
+
+h2 {
+  font-size: 50px;
+  color: #9E0101;
+  /* font-family: "helvetica"; */
+  /* font-family: "vampliersregular"; */
+  font-family: "vampliersregular";
+  letter-spacing: 5px;
+}
+/* styling for demo, can ignore */
+/* body {
+  text-align: center;
+  font-size: 120%;
+  line-height: 1.618;
+} */
+h2.black{ 
+  font-size: 50px;
+  color: black;
+  font-family: "vampliersregular";
+  letter-spacing: 5px;
+  
+  /* font-family: "vampliersregular"; */
+
+}
+h2.white {
+  font-size: 50px;
+  color: white;
+  /* font-family: "helvetica"; */
+  /* font-family: "vampliersregular"; */
+  font-family: "vampliersregular";
+  letter-spacing: 5px;
+}
+
+h2.red {
+  font-size: 50px;
+  color: #9E0101;
+  /* font-family: "helvetica"; */
+  /* font-family: "vampliersregular"; */
+  font-family: "vampliersregular";
+  letter-spacing: 5px;
+  margin-top : 350px;
+}
+p {
+  margin: 20px;
+  font-family: 'Helvetica';
+  font-size: 20px;
+  margin-top: 100px;
+  font-style: italic;
+ /* justify-content: center; */
+
+
+}
+
+p.white {
+  margin: 20px;
+  font-family: 'Helvetica';
+  font-size: 20px;
+  margin-top: -600px;
+  font-style: italic;
+  color: white;
+ justify-content: center;
+
+}
+
+
+.boxGauche {
+  float: left;
+  width: 600px;
+  height: 150px;
+  margin-left : 30px;
+  text-align: justify;
+}
+
+.boxDroite {
+  float: right;
+  width: 600px;
+  height: 150px;
+  margin-right : 30px;
+  text-align: justify;
+  margin-top: 200px;
+}
+

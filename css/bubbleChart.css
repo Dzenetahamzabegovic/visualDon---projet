@@ -1,0 +1,25 @@
+body {
+  background-color: #ffffff;
+  min-height: 100%;
+  font-family: "Vollkorn SC", serif;
+}
+
+
+#chart-balloon-wrapper {
+  float: right;
+  margin-top: -600px;
+margin-right: 200px;
+}
+
+
+#tooltip {
+  position: absolute;
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
