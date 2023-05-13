@@ -1,0 +1,84 @@
+/* .container {
+  text-align: center;
+padding-bottom: 300px;
+margin-left : 100px;
+} */
+
+/* .container {
+  text-align: center;
+  padding-bottom: 1200px;
+  margin-left: 100px;
+}
+
+.center {
+  display: block;
+  margin: 50px auto 0; /* Ajout de 50px de marge supérieure 
+} */
+
+
+/* .container {
+  position: flex;
+  text-align: center;
+  padding-bottom: 300px;
+  margin-left: 100px;
+} */
+
+.container {
+  float: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+
+
+
+
+
+ul {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 5px;
+  }
+
+
+  /* .infobox {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.infobox.active {
+  opacity: 3;
+  pointer-events: auto;
+} */
+
+
+
+.tooltipCarte {
+  position: absolute;
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
