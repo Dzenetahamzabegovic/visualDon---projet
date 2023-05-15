@@ -10,7 +10,7 @@ body {
 .panel { 
   /* min height incase content is higher than window height */
   min-height: 100vh;
-  display: flex;
+  /* display: flex; */
   justify-content: left;
   justify-content: center;
   font-family: sans-serif;
@@ -79,7 +79,6 @@ p {
   margin: 20px;
   font-family: 'Helvetica';
   font-size: 20px;
-  margin-top: 100px;
   font-style: italic;
  /* justify-content: center; */
 
@@ -115,3 +114,32 @@ p.white {
   margin-top: 200px;
 }
 
+
+#info {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 100px;
+  text-align: justify;
+  font-family: 'Helvetica';
+  font-weight: bolder;
+  font-size: 15px;
+  font-style: italic;
+  color: rgb(6, 6, 6);
+  justify-content: center;
+}
+
+
+
+#footer {
+  font-family: "vampilers";
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  HEIGHT: 100px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}

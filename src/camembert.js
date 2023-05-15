@@ -3,7 +3,7 @@ import data from "../data/DataKillers.csv";
 // construire le camembert
 // créer un canevas de 400 pixels de large sur 400 pixels de haut
 // un cercle de rayon 200 pixels centré dans le canevas
-const width = 800,
+const width = 700,
   height = 500,
   radius = Math.min(width, height) / 2;
 
@@ -47,8 +47,8 @@ const dataCamembert = [
 const svg = d3
   .select("#camembert")
   .append("svg")
-  .attr("width", width)
-  .attr("height", height);
+  .attr("width", 700)
+  .attr("height", 700);
 // Créer un groupe pour le camembert centré dans le canevas
 const g = svg
   .append("g")
@@ -87,79 +87,40 @@ const path = g
     };
   });
 
-// ----------------- LEGENDES ----------------- //
-// select the svg area
-var Svg = d3.select("#legendBox");
-
-// LABELS QUI VONT ETRE AFFICHéES
-var keys = ["victimes-prouvees", "victimes-possibles"];
-
-// Usually you have a color scale in your chart already
-var color = d3.scaleOrdinal().range(myColors);
-
-// AJOUT D'UN ROND POUR LES LEGENDES
-Svg.selectAll("mydots")
-  .data(keys)
-  .enter()
-  .append("circle")
-  .attr("cx", 100)
-  .attr("cy", function (d, i) {
-    return 100 + i * 25;
-  }) // 100 is where the first dot appears. 25 is the distance between dots
-  .attr("r", 7)
-  .style("fill", function (d) {
-    return color(d);
-  });
-
-// AJOUTER DES LABELS POUR CHAAUQE RONDS
-Svg.selectAll("mylabels")
-  .data(keys)
-  .enter()
-  .append("text")
-  .attr("x", 120)
-  .attr("y", function (d, i) {
-    return 100 + i * 25;
-  }) // 100 is where the first dot appears. 25 is the distance between dots
-  .style("fill", function (d) {
-    return color(d);
-  })
-  .text(function (d) {
-    return d;
-  })
-  .attr("text-anchor", "left")
-  .style("alignment-baseline", "middle");
-
 // Créer un tableau avec les étiquettes
 const labels = ["Victimes prouvées", "Victimes possibles"];
 
-// Ajouter des cercles pour chaque étiquette
-const legend = svg
-  .selectAll(".legend")
-  .style("margin-left", "100px")
-  .data(labels)
+// const text = g
+//   .selectAll("text")
+//   .data(pie(dataCamembert))
+//   .enter()
+//   .append("text")
+//   .attr("class", "legend")
+//   .style("fill", "white")
+//   .style("font-size", "20px")
+//   .style("margin-top", "20px")
+//   .attr("transform", function (d) {
+//     var c = arc.centroid(d);
+//     return "translate(" + c[0] + "," + c[1] + ")";
+//   })
+//   .attr("dy", ".35em")
+//   .text(function (d) {
+//     return d.data.label;
+//   });
+const text = g
+  .selectAll("text")
+  .data(pie(dataCamembert))
   .enter()
-  .append("g")
-  .attr("class", "legend")
-  .attr("transform", function (d, i) {
-    return "translate(-50," + (i - 1) * 25 + ")";
-  });
-
-legend
-  .append("circle")
-  .attr("cx", width - 220)
-  .attr("cy", height - 460)
-  .attr("r", 10)
-  .style("fill", function (d, i) {
-    return colors(i);
-  });
-
-// Ajouter du texte pour chaque étiquette
-legend
   .append("text")
-  .attr("x", width - 200)
-  .attr("y", height - 460)
+  .attr("class", "legend")
+  .style("fill", "white")
+  .style("font-size", "20px")
+  .style("margin-top", "20px")
+  .attr("transform", function (d) {
+    var c = arc.centroid(d);
+    return "translate(" + c[0] + "," + c[1] + ")";
+  })
   .attr("dy", ".35em")
-  .style("text-anchor", "start")
-  .text(function (d) {
-    return d;
+  .text(function (d, i) {
+    return i === 0 ? "Victimes possibles" : "Victimes prouvées";
   });

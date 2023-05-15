@@ -97,7 +97,7 @@ const colorScale = d3
   .scalePow()
   .exponent(0.2) // ajuste l'exposant pour la racine carrée ou 1 pour le logarithme
   .domain([0, maxCount])
-  .range([d3.interpolateBlues(0.2), d3.interpolateReds(0.8)])
+  .range([d3.interpolateBlues(0.2), d3.interpolateReds(0.9)])
   .interpolate(d3.interpolateHcl);
 
 // Créer une div pour afficher l'info box
@@ -164,7 +164,11 @@ d3.json("data/world.geojson").then((data) => {
           tooltip.transition().duration(200).style("opacity", 0.9);
           console.log(d);
           tooltip
-            .html(`${d.properties.name}`)
+            .html(
+              `${d.properties.name}: le nombre de tueurs en série est de : ${
+                counts[d.properties.name]
+              }`
+            )
             .style("left", e.layerX + 10 + "px")
             .style("top", e.layerY - 28 + "px");
         })

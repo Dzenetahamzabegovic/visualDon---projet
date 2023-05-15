@@ -43,7 +43,7 @@ const dataHisto = [
   { label: "Couples", count: 0 },
   { label: "Aleatoire", count: 20 },
   { label: "Homosexuels", count: 1 },
-  { label: "No comment", count: 0 },
+  { label: "Aucune donnée", count: 0 },
 ];
 
 const CountChoixVictime = dataHisto.length;

@@ -16,6 +16,8 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://d3js.org/d3.v4.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+
 
 
   
@@ -39,6 +41,8 @@
 <!-- carte  -->
 <h2 class="black" style="text-align: center; padding-top: 20px;" >le monde en sang</h2>
 
+
+<p> Derrière les portes closes de notre monde se cachent des secrets effrayants et des mystères obscurs. Parmi nous se cachent des tueurs en série dont les actes terrifiants ont marqué l'histoire de chaque pays. Plongez dans les mystères les plus sombres de l'humanité et découvrez quel pays en abrite le plus.</p>
 <div class="panel" data-color="red">
   <div class="container">
     <svg id="mapWorld"></svg>
@@ -53,10 +57,17 @@
 
 
 <!-- choix des victimes  pictogramme -->
-  <div class="panel" data-color="white">
-    <h2 class="black">Pensez-vous être une proie potentielle ?</h2>
-  </div>
 
+
+  <div id="panelPicto" class="panel" data-color="white">
+    <h2 class="black" style="text-align: center; padding-top: 20px;">Pensez-vous être une proie potentielle ?</h2>
+   
+   <p>  Les tueurs en série sont des prédateurs sournois, souvent cachés dans l'ombre, surveillant et attendant leur prochaine proie. Mais qui sait ce qui attire leur attention et ce qui peut les pousser à choisir leur victime ?  Le mystère reste entier, rappelant que personne n'est à l'abri de leurs griffes aiguisées.</p>
+    
+<div id="info"> Les données présentées sur ce graphique ont été ajustées à une échelle créée par nos soins. Nous avons pris le chiffre le plus élevé (136) et avons décidé qu'il représentait 20 personnes. Ainsi, toutes les autres valeurs ont été rapportées à cette échelle. Toutefois, certaines catégories ne possèdent pas de données suffisamment élevées pour être représentées par au moins un individu sur le graphique, ce qui est regrettable.
+
+</div>
+  
   <button id="bouton_graphique"><span class="visually-hidden">Clique-moi...</span></button>
   <svg class="chart_picto"></svg>
   <script type="module" src="/src/graphique_picto.js"></script>
@@ -64,12 +75,11 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
  </div>
 
-
+</div>
 <!-- mode operaotire bubble chart -->
 
-
   <div class="panel" data-color="black">
-    <h2 class="white">Est-ce que le mode opératoire est toujours le même ?</h2>
+    <h2 class="white" style=" margin-left:10px; margin-top:100px">Est-ce que le mode opératoire est toujours le même ?</h2>
   </div>
 
   <div class="boxGauche"> <p class="white"> Jeffrey Dahmer pratiquait la nécrophilie et le cannibalisme sur certaines de ses victimes.
@@ -84,56 +94,40 @@
       </div>
     </div>
   </div>
-
       
   <!-- victimes possible camembert-->
 
 
   <div class="panel" data-color="white">
-    <h2 class="black" style="text-align : justify; margin-left: 200px">Existe-t-il une possibilité que certaines victimes soient encore manquantes ?</h2>
-    <div id="camembert">
-      
-    </div> 
-    <!-- <div class="boxGauche"><p>Un tueur en série est un criminel qui commet généralement trois ou plus de meurtres dans des circonstances similaires. Le nombre de victimes recensés à ce jour s’élève à 7893. 
-      <br>
-      <br>Mais savons nous si toutes les victimes ont été trouvées ?</p></div> -->
-      <!-- <div class="legend-item">
-        <div class="legend-color legend-color-1"></div>
-        <div class="legend-label">Victimes prouvées</div>
-      </div> -->
-      <!-- <div class="legend-item">
-        <div class="legend-color legend-color-2"></div>
-        <div class="legend-label">Victimes possibles</div>
-      </div>
-    </div>
-  </div> -->
+    <h2 class="black" style="text-align: right; padding-top: 20px; margin-right:20px">Pensez-vous être une proie potentielle ?</h2>
+       <div id="camembert"></div>
 
-  
-
-    </div>
+    <p  style="text-align: right;">  Un tueur en série est un criminel qui commet généralement trois ou plus de meurtres dans des circonstances similaires. Le nombre de victimes recensées à ce jour s’élève à 7893. Mais savons nous si toutes les victimes ont été trouvées ?</p>
   </div>
 
 
+</div>
+
+ 
+
+
 <!-- execution -->
-
-
-<h2 class="black" style="text-align: center; padding-top: 20px;" >Qu'est-il advenu de ces tueurs en série ?</h2>
-
 <div class="panel" data-color="red">
-<!-- <p>Certains des tueurs en série sont en prison, d'autres sont morts, mais qui sait combien sont toujours en liberté, attendant leur prochaine victime. 
-<br>Leurs histoires sont terrifiantes et troublantes, rappelant que le mal peut être partout et nulle part à la fois.</p> -->
+<h2 class="black" style="margin-right: 300px; margin-top:300px; margin-left: 20px" >Qu'est-il advenu de ces tueurs en série ?</h2>
+
+<div > <p class="black" margin-top:100px> Certains des tueurs en série sont en prison, d'autres sont morts, mais qui sait combien sont toujours en liberté, attendant leur prochaine victime. Leurs histoires sont terrifiantes et troublantes, rappelant que le mal peut être partout et nulle part à la fois. </p></div>
+
 <div id="chartCloud-wrapper" >
-              <div id="chartCloud"></div>
+  <div id="chartCloud"></div>
+
+
             </div>
           
-          </div> 
+          <!-- </div>  -->
+</div>
 
-
-
-          <!-- image de fin -->
-          <div class="panel" data-color="black">
-            <h2 class="red"> Vous sentez vous en danger maintenant ? </h2>
-          
+<div id="footer" style="font-family: Arial, Helvetica, sans-serif"> Projet VisualDon 2023 <br> Dzeneta H. & Déborah M.
+</div>
 
 <!-- pas toucher -->
 <script>

@@ -65,17 +65,17 @@ var diameter = 500;
 
 // couleurs
 var color = [
-  "#FFA07A", // N/A
+  " #ffcccc", // N/A
   "#FA8072", // Enlèvement
-  "#E9967A", // Meurtre
-  "#F08080", // Éviscération
-  "#CD5C5C", // Viol
-  "#DC143C", // Strangulation
-  "#B22222", // Cannibalisme
-  "red", // Empoissonement
+  "#b30000", // Meurtre = 275
+  "#ffffff", // Éviscération
+  "#e60000", // Viol
+  "#ff6666", // Strangulation
+  "#FA8072", // Cannibalisme
+  "#ff8080", // Empoissonement
   "#8B0000", // Démembrement
-  "	#FF6347", // Poignardement
-  "#850606", // Torture
+  "#ffffff", // Poignardement
+  "#ff6666", // Torture
 ];
 
 // Création de l'objet d3.pack
@@ -122,7 +122,7 @@ node
   })
 
   // Ajouter des événements de souris pour afficher/masquer le tooltip
-  .on("mouseover", function (e,d) {
+  .on("mouseover", function (e, d) {
     tooltipBubble.transition().duration(200).style("opacity", 0.9);
     tooltipBubble
       .html(d.data.label + "<br/>" + d.data.count + " cas")
@@ -130,5 +130,5 @@ node
       .style("top", e.layerY - 28 + "px");
   })
   .on("mouseout", function (d) {
-     tooltipBubble.transition().duration(500).style("opacity", 0);
+    tooltipBubble.transition().duration(500).style("opacity", 0);
   });
