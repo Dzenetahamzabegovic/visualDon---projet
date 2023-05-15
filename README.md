@@ -35,3 +35,7 @@ Ce jeu de données est resté inutilisé. Cependant, quelques utilisateurs du si
 WireFrame :
 
 [wireFrame_SerialKillers_Deb_Dzen.pdf](https://github.com/Dzenetahamzabegovic/visualDon---projet/files/10991989/wireFrame_SerialKillers_Deb_Dzen.pdf)
+
+Projet final : 
+[VisualDon-projetFinal-Dzen&Deb.zip](https://github.com/Dzenetahamzabegovic/visualDon---projet/files/11481440/VisualDon-projetFinal-Dzen.Deb.zip)
+
